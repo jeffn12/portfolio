@@ -1,12 +1,13 @@
 import React from 'react';
+// Components
+import { Box } from '@material-ui/core'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div className="">
-      <header className="">
-       Jeff Neuberger - Developer
-      </header>
-    </div>
+    <Box>
+      <Navbar />
+    </Box>
   );
 }
 
