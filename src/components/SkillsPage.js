@@ -10,7 +10,7 @@ function SkillsPage() {
   return (
     <Box
       style={{
-        padding: "5rem",
+        padding: "2rem",
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-around"
