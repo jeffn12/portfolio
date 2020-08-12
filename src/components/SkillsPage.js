@@ -4,7 +4,7 @@ import Skill from "./Skill";
 // Material UI
 import { Box } from "@material-ui/core";
 // Helpers
-import { skill_list } from "./skill_list";
+import { skill_list } from "../utils/skill_list";
 
 function SkillsPage() {
   return (
