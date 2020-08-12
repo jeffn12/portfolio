@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Container>
         <Box>
-          {[...new Array(12)]
+          {[...new Array(20)]
             .map(
               () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.

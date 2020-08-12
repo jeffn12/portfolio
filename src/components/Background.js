@@ -32,20 +32,20 @@ function Background() {
         }}
       >
         <img
-          alt="open double doors"
+          alt="double doors open to possibilities"
           style={{
             opacity: opacity,
             filter: `blur(${filter}px) brightness(0.7)`,
             position: "absolute",
             background:
-              "url('/public/philipp-berndt-5i0GnoTTjSE-unsplash.jpg')",
+              "url('/philipp-berndt-5i0GnoTTjSE-unsplash.jpg') center center",
             backgroundSize: "cover",
             top: "-10%",
-            bottom: "10%",
+            bottom: "-10%",
             left: "-10%",
-            right: "10%",
-            width: "120%",
-            height: "120%"
+            right: "-10%",
+            width: "120%"
+            //height: "120%"
           }}
         />
       </div>
