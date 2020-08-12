@@ -20,7 +20,7 @@ function SkillsPage() {
         }}
       >
         {SKILL_LIST.map((skill) => (
-          <Skill skill={skill} />
+          <Skill key={skill.skill} skill={skill} />
         ))}
       </Box>
     </>

@@ -4,7 +4,7 @@ import { Box, Typography, Link as MUILink, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 function Project(props) {
-  const { title, description, codeURL, liveURL, icon } = props.project;
+  const { title, description, codeURL, liveURL } = props.project;
   const Styles = useStyles();
 
   return (

@@ -11,7 +11,7 @@ function ContactPage() {
       <SectionHeader title="Contact Me" />
       <Box style={{ display: "flex", flexWrap: "wrap", minWidth: "5rem" }}>
         {CONTACTS.map((contact) => (
-          <Contact contact={contact} />
+          <Contact key={contact.contactType} contact={contact} />
         ))}
       </Box>
     </>

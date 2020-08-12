@@ -16,23 +16,21 @@ function ProjectPage() {
       <SectionHeader title="My Projects" />
       <Box className={Styles.root}>
         {PROJECT_LIST.map((project) => (
-          <>
-            <Box className={Styles.project}>
-              <img
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "100%",
-                  background: `url(${project.icon})`,
-                  backgroundSize: "contain",
-                  opacity: 0.1,
-                  zIndex: -1,
-                  borderRadius: "10px"
-                }}
-              />
-              <Project style={{ zIndex: 0 }} project={project} />
-            </Box>
-          </>
+          <Box className={Styles.project} key={project.title}>
+            <img
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                background: `url(${project.icon})`,
+                backgroundSize: "contain",
+                opacity: 0.1,
+                zIndex: -1,
+                borderRadius: "10px"
+              }}
+            />
+            <Project style={{ zIndex: 0 }} project={project} />
+          </Box>
         ))}
       </Box>
     </>
