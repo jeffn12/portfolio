@@ -22,7 +22,7 @@ function ProjectPage() {
                 height: "100%",
                 background: `url(${project.icon})`,
                 backgroundSize: "contain",
-                opacity: 0.2,
+                opacity: 0.1,
                 zIndex: -1,
                 borderRadius: "10px"
               }}
