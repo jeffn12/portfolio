@@ -4,7 +4,7 @@ import Skill from "./Skill";
 // Material UI
 import { Box } from "@material-ui/core";
 // Helpers
-import { skill_list } from "../utils/skill_list";
+import { SKILL_LIST } from "../utils/skill_list";
 
 function SkillsPage() {
   return (
@@ -16,7 +16,7 @@ function SkillsPage() {
         justifyContent: "space-around"
       }}
     >
-      {skill_list.map((skill) => (
+      {SKILL_LIST.map((skill) => (
         <Skill skill={skill} />
       ))}
     </Box>

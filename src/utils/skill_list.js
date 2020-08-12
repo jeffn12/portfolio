@@ -1,4 +1,4 @@
-export const skill_list = [
+export const SKILL_LIST = [
   {
     skill: "JavaScript",
     icon: "javascript.svg",
