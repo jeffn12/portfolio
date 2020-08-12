@@ -3,33 +3,18 @@ import React from "react";
 import Project from "./Project";
 // Material UI
 import { Box } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 // Helpers
 import { PROJECT_LIST } from "../utils/project_list";
 
 function ProjectPage() {
+  const Styles = useStyles();
+
   return (
-    <Box
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-around",
-        alignItems: "center"
-      }}
-    >
+    <Box className={Styles.root}>
       {PROJECT_LIST.map((project) => (
         <>
-          <Box
-            style={{
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "center",
-              position: "relative",
-              top: 0,
-              left: 0,
-              width: "20rem",
-              height: "15rem"
-            }}
-          >
+          <Box className={Styles.project}>
             <img
               style={{
                 position: "absolute",
@@ -51,3 +36,22 @@ function ProjectPage() {
 }
 
 export default ProjectPage;
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignItems: "center"
+  },
+  project: {
+    display: "flex",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    position: "relative",
+    top: 0,
+    left: 0,
+    width: "20rem",
+    height: "15rem"
+  }
+});
