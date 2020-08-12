@@ -26,10 +26,7 @@ function AboutMe() {
     <Box className={Styles.root} style={{ height: windowHeight * 0.8 }}>
       <Typography className={Styles.title}>Hi. I'm Jeff.</Typography>
       <Typography className={Styles.subTitle}>
-        I use code and design to
-      </Typography>
-      <Typography className={Styles.emphasize}>
-        open the doors of possibility.
+        I use code and design to open the doors of possibility.
       </Typography>
     </Box>
   );
@@ -46,15 +43,10 @@ const useStyles = makeStyles({
     marginBottom: document.documentElement.clientHeight * 0.2
   },
   title: {
-    fontSize: "4rem"
+    fontSize: "5rem"
   },
   subTitle: {
     fontSize: "1.5rem",
-    width: "65%",
     textAlign: "center"
-  },
-  emphasize: {
-    fontSize: "2rem",
-    fontStyle: "italic"
   }
 });
