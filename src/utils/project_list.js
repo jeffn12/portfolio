@@ -5,7 +5,7 @@ export const PROJECT_LIST = [
       "an adaptation of the popular polling game written with React (UI) and Redux (State Management)",
     codeURL: "https://github.com/jeffn12/reactnd-project-would-you-rather",
     liveURL: "https://jn-would-you-rather.herokuapp.com",
-    icon: ""
+    icon: "/would_you_rather.png"
   },
   {
     title: "Mobile Flashcards App",

@@ -8,9 +8,42 @@ import { PROJECT_LIST } from "../utils/project_list";
 
 function ProjectPage() {
   return (
-    <Box style={{ display: "flex", flexWrap: "wrap" }}>
+    <Box
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-around",
+        alignItems: "center"
+      }}
+    >
       {PROJECT_LIST.map((project) => (
-        <Project project={project} />
+        <>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
+              position: "relative",
+              top: 0,
+              left: 0,
+              width: "20rem",
+              height: "15rem"
+            }}
+          >
+            <img
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                background: `url(${project.icon})`,
+                backgroundSize: "cover",
+                opacity: 0.1,
+                zIndex: -1
+              }}
+            />
+            <Project style={{ zIndex: 0 }} project={project} />
+          </div>
+        </>
       ))}
     </Box>
   );
