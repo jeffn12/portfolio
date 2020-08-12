@@ -7,6 +7,7 @@ import SplashPage from "./components/SplashPage";
 import ProjectPage from "./components/ProjectPage";
 import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
           </Box>
         </Container>
       }
+      <Footer />
     </Box>
   );
 }
