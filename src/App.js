@@ -10,7 +10,12 @@ function App() {
   return (
     <Box
       mx={2}
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        minWidth: "375px"
+      }}
     >
       <Background />
       <Navbar />

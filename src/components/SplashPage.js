@@ -43,7 +43,8 @@ const useStyles = makeStyles({
     marginBottom: document.documentElement.clientHeight * 0.2
   },
   title: {
-    fontSize: "5rem"
+    fontSize: "5rem",
+    textAlign: "center"
   },
   subTitle: {
     fontSize: "1.5rem",
