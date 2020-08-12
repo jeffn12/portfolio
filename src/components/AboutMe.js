@@ -1,30 +1,35 @@
 import React from "react";
+// Components
+import SectionHeader from "./SectionHeader";
 // Material UI
-import { Box, Typography, Avatar } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 
 function AboutMe() {
   return (
-    <Box
-      style={{
-        width: "100%",
-        alignSelf: "flex-end",
-        marginBottom: "15rem",
-        position: "relative",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-end"
-      }}
-    >
-      <Typography
-        align="right"
-        style={{ fontSize: "2.5rem", marginBottom: "2rem" }}
+    <>
+      <SectionHeader title="About Me" />
+      <Box
+        style={{
+          width: "100%",
+          alignSelf: "flex-end",
+          marginBottom: "15rem",
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end"
+        }}
       >
-        My name is Jeff Neuberger
-      </Typography>
-      <Typography align="right" style={{ fontSize: "1.3rem", width: "80%" }}>
-        {ABOUT_ME}
-      </Typography>{" "}
-    </Box>
+        <Typography
+          align="right"
+          style={{ fontSize: "2.5rem", marginBottom: "1rem" }}
+        >
+          My name is Jeff Neuberger
+        </Typography>
+        <Typography align="right" style={{ fontSize: "1.3rem", width: "80%" }}>
+          {ABOUT_ME}
+        </Typography>{" "}
+      </Box>
+    </>
   );
 }
 
