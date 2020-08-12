@@ -36,17 +36,20 @@ const useStyles = makeStyles({
   title: {
     fontSize: "1.5rem",
     textAlign: "center",
-    margin: ".1rem"
+    margin: ".1rem",
+    fontWeight: 500
   },
   description: {
     fontSize: "1rem",
     textAlign: "center",
     fontStyle: "italic",
-    margin: ".1rem"
+    margin: ".1rem",
+    fontWeight: 400
   },
   button: {
     width: "8rem",
     margin: "0rem 0.25rem",
-    backgroundColor: "#aaa"
+    backgroundColor: "#aaa",
+    fontWeight: 500
   }
 });
