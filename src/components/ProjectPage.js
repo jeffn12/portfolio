@@ -18,6 +18,7 @@ function ProjectPage() {
         {PROJECT_LIST.map((project) => (
           <Box className={Styles.project} key={project.title}>
             <img
+              alt={`screenshot of ${project.title}`}
               style={{
                 position: "absolute",
                 width: "100%",
