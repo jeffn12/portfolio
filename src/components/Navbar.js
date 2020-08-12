@@ -34,7 +34,8 @@ const useStyles = makeStyles({
   root: {
     flexGrow: 1,
     position: "sticky",
-    marginBottom: "4rem"
+    marginBottom: "4rem",
+    zIndex: 1
   },
   appBar: {
     backgroundColor: "transparent",

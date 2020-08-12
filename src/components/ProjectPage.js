@@ -26,11 +26,10 @@ function ProjectPage() {
                 background: `url(${project.icon})`,
                 backgroundSize: "contain",
                 opacity: 0.1,
-                zIndex: -1,
                 borderRadius: "10px"
               }}
             />
-            <Project style={{ zIndex: 0 }} project={project} />
+            <Project project={project} />
           </Box>
         ))}
       </Box>
