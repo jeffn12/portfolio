@@ -4,13 +4,18 @@ import { Box, Container } from "@material-ui/core";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/SplashPage";
+import SkillsPage from "./components/SkillsPage";
 
 function App() {
   return (
-    <Box mx={2}>
+    <Box
+      mx={2}
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <Background />
       <Navbar />
       <AboutMe />
+      <SkillsPage />
       {
         <Container>
           <Box>
