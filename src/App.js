@@ -5,6 +5,7 @@ import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/SplashPage";
 import SkillsPage from "./components/SkillsPage";
+import ProjectPage from "./components/ProjectPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Background />
       <Navbar />
       <AboutMe />
+      <ProjectPage />
       <SkillsPage />
       {
         <Container>
