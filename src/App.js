@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Container } from "@material-ui/core";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
-import AboutMe from "./components/SplashPage";
+import SplashPage from "./components/SplashPage";
 import ProjectPage from "./components/ProjectPage";
 import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
@@ -21,7 +21,7 @@ function App() {
     >
       <Background />
       <Navbar />
-      <AboutMe />
+      <SplashPage />
       <ProjectPage />
       <SkillsPage />
       <ContactPage />

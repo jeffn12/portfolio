@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
-function AboutMe() {
+function SplashPage() {
   const [windowHeight, setWindowHeight] = useState(
     document.documentElement.clientHeight
   );
@@ -32,7 +32,7 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default SplashPage;
 
 const useStyles = makeStyles({
   root: {
