@@ -10,13 +10,14 @@ function SkillsPage() {
   return (
     <Box
       style={{
-        maxWidth: "45rem",
+        padding: "5rem",
         display: "flex",
-        flexWrap: "wrap"
+        flexWrap: "wrap",
+        justifyContent: "space-around"
       }}
     >
       {skill_list.map((skill) => (
-        <Skill skill={skill.skill} icon={skill.icon} />
+        <Skill skill={skill} />
       ))}
     </Box>
   );
