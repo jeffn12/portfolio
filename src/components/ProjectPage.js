@@ -6,32 +6,36 @@ import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 // Helpers
 import { PROJECT_LIST } from "../utils/project_list";
+import SectionHeader from "./SectionHeader";
 
 function ProjectPage() {
   const Styles = useStyles();
 
   return (
-    <Box className={Styles.root}>
-      {PROJECT_LIST.map((project) => (
-        <>
-          <Box className={Styles.project}>
-            <img
-              style={{
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                background: `url(${project.icon})`,
-                backgroundSize: "contain",
-                opacity: 0.1,
-                zIndex: -1,
-                borderRadius: "10px"
-              }}
-            />
-            <Project style={{ zIndex: 0 }} project={project} />
-          </Box>
-        </>
-      ))}
-    </Box>
+    <>
+      <SectionHeader title="My Projects" />
+      <Box className={Styles.root}>
+        {PROJECT_LIST.map((project) => (
+          <>
+            <Box className={Styles.project}>
+              <img
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  background: `url(${project.icon})`,
+                  backgroundSize: "contain",
+                  opacity: 0.1,
+                  zIndex: -1,
+                  borderRadius: "10px"
+                }}
+              />
+              <Project style={{ zIndex: 0 }} project={project} />
+            </Box>
+          </>
+        ))}
+      </Box>
+    </>
   );
 }
 
@@ -42,7 +46,8 @@ const useStyles = makeStyles({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom: "10rem"
   },
   project: {
     display: "flex",

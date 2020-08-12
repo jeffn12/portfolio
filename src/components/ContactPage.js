@@ -3,14 +3,18 @@ import React from "react";
 import Contact from "./Contact";
 // Material UI
 import { Box } from "@material-ui/core";
+import SectionHeader from "./SectionHeader";
 
 function ContactPage() {
   return (
-    <Box style={{ display: "flex", flexWrap: "wrap", minWidth: "5rem" }}>
-      {CONTACTS.map((contact) => (
-        <Contact contact={contact} />
-      ))}
-    </Box>
+    <>
+      <SectionHeader title="Contact Me" />
+      <Box style={{ display: "flex", flexWrap: "wrap", minWidth: "5rem" }}>
+        {CONTACTS.map((contact) => (
+          <Contact contact={contact} />
+        ))}
+      </Box>
+    </>
   );
 }
 

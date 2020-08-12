@@ -5,7 +5,7 @@ Welcome to the repository for my professional portfolio. Feel free to check out 
 ##### TODO:
 
 - [x] Artsy Header...
-- [ ] About Me
+- [x] About Me
 - [x] Projects
 - [x] Skills
 - [x] Contacts

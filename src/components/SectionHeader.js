@@ -4,7 +4,12 @@ import { Box, Typography } from "@material-ui/core";
 
 function SectionHeader(props) {
   return (
-    <Box style={{ alignSelf: "flex-start", marginBottom: "10rem" }}>
+    <Box
+      style={{
+        alignSelf: "flex-start",
+        marginBottom: "2rem"
+      }}
+    >
       <Typography
         variant="h2"
         style={{
