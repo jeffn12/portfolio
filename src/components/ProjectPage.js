@@ -18,7 +18,7 @@ function ProjectPage() {
     >
       {PROJECT_LIST.map((project) => (
         <>
-          <div
+          <Box
             style={{
               display: "flex",
               alignItems: "flex-end",
@@ -38,11 +38,12 @@ function ProjectPage() {
                 background: `url(${project.icon})`,
                 backgroundSize: "cover",
                 opacity: 0.1,
-                zIndex: -1
+                zIndex: -1,
+                borderRadius: "10px"
               }}
             />
             <Project style={{ zIndex: 0 }} project={project} />
-          </div>
+          </Box>
         </>
       ))}
     </Box>
