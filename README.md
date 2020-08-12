@@ -8,7 +8,7 @@ Welcome to the repository for my professional portfolio. Feel free to check out 
 - [ ] About Me
 - [x] Projects
 - [x] Skills
-- [ ] Contacts
+- [x] Contacts
 
 #### Thanks
 
