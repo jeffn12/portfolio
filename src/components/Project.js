@@ -35,12 +35,14 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: "1.5rem",
-    textAlign: "center"
+    textAlign: "center",
+    margin: ".1rem"
   },
   description: {
     fontSize: "1rem",
     textAlign: "center",
-    fontStyle: "italic"
+    fontStyle: "italic",
+    margin: ".1rem"
   },
   button: {
     width: "8rem",

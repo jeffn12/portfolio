@@ -21,8 +21,8 @@ function ProjectPage() {
                 width: "100%",
                 height: "100%",
                 background: `url(${project.icon})`,
-                backgroundSize: "cover",
-                opacity: 0.1,
+                backgroundSize: "contain",
+                opacity: 0.2,
                 zIndex: -1,
                 borderRadius: "10px"
               }}
@@ -52,6 +52,7 @@ const useStyles = makeStyles({
     top: 0,
     left: 0,
     width: "20rem",
-    height: "15rem"
+    height: "15rem",
+    margin: ".2rem"
   }
 });
