@@ -4,6 +4,7 @@ import { Box, Container } from "@material-ui/core";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import SplashPage from "./components/SplashPage";
+import AboutMe from "./components/AboutMe";
 import ProjectPage from "./components/ProjectPage";
 import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
@@ -23,6 +24,7 @@ function App() {
       <Background />
       <Navbar />
       <SplashPage />
+      <AboutMe />
       <ProjectPage />
       <SkillsPage />
       <ContactPage />
