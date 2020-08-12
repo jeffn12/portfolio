@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
+    <Box mx={2}>
       <Background />
       <Navbar />
       <Container>
@@ -21,7 +21,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
             .join("\n")}
         </Box>
       </Container>
-    </>
+    </Box>
   );
 }
 
