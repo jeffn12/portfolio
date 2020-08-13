@@ -34,7 +34,7 @@ export default Skill;
 
 const useStyles = makeStyles({
   iconText: {
-    fontSize: ".75rem",
-    fontStyle: "italic"
+    fontFamily: "Lora",
+    fontSize: ".75rem"
   }
 });

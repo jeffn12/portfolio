@@ -1,13 +1,10 @@
 import React from "react";
-// Components
-import SectionHeader from "./SectionHeader";
 // Material UI
 import { Box, Typography } from "@material-ui/core";
 
 function AboutMe() {
   return (
     <>
-      <SectionHeader title="About Me" />
       <Box
         style={{
           width: "100%",
@@ -22,8 +19,10 @@ function AboutMe() {
         <Typography
           align="right"
           style={{
+            fontFamily: "Montserrat",
             fontSize: "2.5rem",
-            marginBottom: "1rem"
+            marginBottom: "1rem",
+            fontWeight: "bold"
           }}
         >
           My name is Jeff Neuberger
@@ -31,6 +30,7 @@ function AboutMe() {
         <Typography
           align="right"
           style={{
+            fontFamily: "Lora",
             fontSize: "1.3rem",
             width: "80%"
           }}

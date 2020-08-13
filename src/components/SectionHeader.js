@@ -7,14 +7,15 @@ function SectionHeader(props) {
     <Box
       style={{
         alignSelf: "flex-start",
-        marginBottom: "6rem"
+        marginBottom: "2rem"
       }}
     >
       <Typography
         variant="h2"
         style={{
-          fontStyle: "italic",
-          fontWeight: "lighter"
+          fontFamily: "Montserrat",
+          fontSize: "2.75rem",
+          fontWeight: "bolder"
         }}
       >
         {props.title}

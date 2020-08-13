@@ -49,13 +49,13 @@ const useStyles = makeStyles({
   },
   project: {
     display: "flex",
-    alignItems: "flex-end",
+    alignItems: "center",
     justifyContent: "center",
     position: "relative",
     top: 0,
     left: 0,
-    width: "20rem",
-    height: "15rem",
-    margin: ".2rem"
+    width: "23.5rem",
+    height: "22rem",
+    margin: "1rem"
   }
 });

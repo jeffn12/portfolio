@@ -42,6 +42,7 @@ const useStyles = makeStyles({
     alignItems: "flex-end"
   },
   linkText: {
+    fontFamily: "Lora",
     fontSize: "1.2rem",
     fontColor: "#aaa",
     marginLeft: "1rem"

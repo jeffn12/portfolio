@@ -12,7 +12,7 @@ function Contact(props) {
       <MUILink href={link} target="_blank">
         <Box className={Styles.container}>
           <img
-            style={{ width: "2rem", height: "2rem", opacity: 0.5 }}
+            style={{ width: "2rem", height: "2rem", opacity: 0.8 }}
             src={icon}
             alt={`logo for ${contactType}`}
           />
@@ -34,6 +34,7 @@ const useStyles = makeStyles({
     margin: "0rem 1rem"
   },
   label: {
+    fontFamily: "Lora",
     fontSize: ".75rem",
     color: "black"
   }

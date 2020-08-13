@@ -36,7 +36,6 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    minWidth: "375px",
     margin: "0rem 1rem"
   }
 });

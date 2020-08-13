@@ -30,26 +30,24 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: "2rem 1rem",
-    width: "300px"
+    margin: "2rem 1rem"
   },
   title: {
-    fontSize: "1.5rem",
-    textAlign: "center",
-    margin: ".1rem",
-    fontWeight: 500
+    fontFamily: "Montserrat",
+    fontSize: "1.7rem",
+    fontWeight: 900,
+    textAlign: "center"
   },
   description: {
-    fontSize: "1rem",
+    fontFamily: "Lora",
+    fontSize: "1.2rem",
     textAlign: "center",
-    fontStyle: "italic",
-    margin: ".1rem",
-    fontWeight: 400
+    fontWeight: 500,
+    margin: "2rem 0"
   },
   button: {
     width: "8rem",
-    margin: "0rem 0.25rem",
-    backgroundColor: "#aaa",
-    fontWeight: 500
+    margin: ".5rem 1rem",
+    backgroundColor: "#aaa"
   }
 });

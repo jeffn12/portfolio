@@ -8,7 +8,11 @@ function Footer() {
       width={1}
       style={{ marginTop: "5rem", marginBottom: "2rem", textAlign: "center" }}
     >
-      <Typography align="center" variant="caption">
+      <Typography
+        align="center"
+        variant="caption"
+        style={{ fontFamily: "Lora" }}
+      >
         © 2020 Jeff Neuberger
       </Typography>
     </Box>
