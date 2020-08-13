@@ -19,7 +19,7 @@ function Skill(props) {
       <Tooltip title={skill} placement="top-start" arrow>
         <img
           style={{ width: "5rem", height: "5rem" }}
-          src={`/icons/${icon}`}
+          src={icon}
           alt={`logo for ${skill}`}
         />
       </Tooltip>

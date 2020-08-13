@@ -13,7 +13,7 @@ function Contact(props) {
         <Box className={Styles.container}>
           <img
             style={{ width: "2rem", height: "2rem", opacity: 0.5 }}
-            src={`/icons/${icon}`}
+            src={icon}
             alt={`logo for ${contactType}`}
           />
           <Typography className={Styles.label}>{contactType}</Typography>

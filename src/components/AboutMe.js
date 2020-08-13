@@ -27,7 +27,7 @@ function AboutMe() {
         </Typography>
         <Typography align="right" style={{ fontSize: "1.3rem", width: "80%" }}>
           {ABOUT_ME}
-        </Typography>{" "}
+        </Typography>
       </Box>
     </>
   );

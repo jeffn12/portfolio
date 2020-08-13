@@ -1,3 +1,11 @@
+import {
+  would_you_rather,
+  flashcards,
+  myreads,
+  issue_tracker,
+  message_board
+} from "../images";
+
 export const PROJECT_LIST = [
   {
     title: "Would You Rather?",
@@ -5,7 +13,7 @@ export const PROJECT_LIST = [
       "an adaptation of the popular polling game written with React (UI) and Redux (State Management)",
     codeURL: "https://github.com/jeffn12/reactnd-project-would-you-rather",
     liveURL: "https://jn-would-you-rather.herokuapp.com",
-    icon: "/project_thumbnails/would_you_rather.png"
+    icon: would_you_rather
   },
   {
     title: "Mobile Flashcards App",
@@ -13,7 +21,7 @@ export const PROJECT_LIST = [
       "a flashcards application for iOS, Android, and Web written with React Native (UI) and Redux",
     codeURL: "https://github.com/jeffn12/mobile-flashcards",
     liveURL: "https://mobile-flashcards.surge.sh",
-    icon: "/project_thumbnails/flashcards.png"
+    icon: flashcards
   },
   {
     title: "MyReads Library",
@@ -21,7 +29,7 @@ export const PROJECT_LIST = [
       "a personal library organizer with a live search of Udacity’s library database written with React",
     codeURL: "https://github.com/jeffn12/reactnd-project-my-reads",
     liveURL: "https://gentle-meadow-47878.herokuapp.com/",
-    icon: "/project_thumbnails/myreads.png"
+    icon: myreads
   },
   {
     title: "Issue Tracker Backend",
@@ -29,7 +37,7 @@ export const PROJECT_LIST = [
       "an issue/ticket tracking system backend written with Express (server) and a MongoDB CRUD API.",
     codeURL: "https://glitch.com/edit/#!/jln-issuetracker",
     liveURL: "https://jln-issuetracker.glitch.me/portfolio/",
-    icon: "/project_thumbnails/issue_tracker.png"
+    icon: issue_tracker
   },
   {
     title: "Message Board Backend",
@@ -37,6 +45,6 @@ export const PROJECT_LIST = [
       "an anonymous message board backend written with Express (server) and a MongoDB CRUD API.",
     codeURL: "https://glitch.com/edit/#!/jln-messageboard",
     liveURL: "https://jln-messageboard.glitch.me/b/portfolio",
-    icon: "/project_thumbnails/message_board.png"
+    icon: message_board
   }
 ];

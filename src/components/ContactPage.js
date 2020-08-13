@@ -4,6 +4,8 @@ import Contact from "./Contact";
 // Material UI
 import { Box } from "@material-ui/core";
 import SectionHeader from "./SectionHeader";
+// Icons
+import { gmail, github, linkedin } from "../images";
 
 function ContactPage() {
   return (
@@ -24,19 +26,19 @@ const CONTACTS = [
   {
     contactType: "gmail",
     link: "mailto:jeffreyneuberger@gmail.com",
-    icon: "gmail.svg",
+    icon: gmail,
     message: "email me"
   },
   {
     contactType: "GitHub",
     link: "https://github.com/jeffn12",
-    icon: "github.svg",
+    icon: github,
     message: "my GitHub profile"
   },
   {
     contactType: "LinkedIn",
     link: "https://www.linkedin.com/in/jeffrey-neuberger/",
-    icon: "linkedin.svg",
+    icon: linkedin,
     message: "my LinkedIn profile"
   }
 ];

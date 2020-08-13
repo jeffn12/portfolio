@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// Images
+import { background } from "../images";
 
 function Background() {
   const [opacity, setOpacity] = useState(1);
@@ -37,8 +39,7 @@ function Background() {
             opacity: opacity,
             filter: `blur(${filter}px) brightness(0.7)`,
             position: "absolute",
-            background:
-              "url('/philipp-berndt-5i0GnoTTjSE-unsplash.jpg') center center",
+            background: `url(${background}) center center`,
             backgroundSize: "cover",
             top: "-10%",
             bottom: "-10%",

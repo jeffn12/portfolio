@@ -1,62 +1,76 @@
+import {
+  javascript,
+  nodejs,
+  react,
+  redux,
+  express,
+  mongodb,
+  git,
+  heroku,
+  surge,
+  aws,
+  materialui
+} from "../images";
+
 export const SKILL_LIST = [
   {
     skill: "JavaScript",
-    icon: "javascript.svg",
+    icon: javascript,
     iconHasText: true
   },
   {
     skill: "Node.js",
-    icon: "nodejs.svg",
+    icon: nodejs,
     iconHasText: true
   },
   {
     skill: "React",
-    icon: "react.svg",
+    icon: react,
     iconHasText: false
   },
   {
     skill: "Redux",
-    icon: "redux.svg",
+    icon: redux,
     iconHasText: false
   },
   {
     skill: "Express.js",
-    icon: "express.svg",
+    icon: express,
     iconHasText: true
   },
   {
     skill: "MongoDB",
-    icon: "mongodb.svg",
+    icon: mongodb,
     iconHasText: true
   },
   {
     skill: "React Native",
-    icon: "react.svg",
+    icon: react,
     iconHasText: false
   },
   {
     skill: "Git",
-    icon: "git.svg",
+    icon: git,
     iconHasText: false
   },
   {
     skill: "Heroku",
-    icon: "heroku.svg",
+    icon: heroku,
     iconHasText: true
   },
   {
     skill: "Surge",
-    icon: "surge.svg",
+    icon: surge,
     iconHasText: false
   },
   {
     skill: "Material UI",
-    icon: "materialui.svg",
-    iconHasText: true
+    icon: materialui,
+    iconHasText: false
   },
   {
     skill: "Amazon Web Services (AWS)",
-    icon: "aws.svg",
+    icon: aws,
     iconHasText: true
   }
 ];
