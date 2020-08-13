@@ -1,4 +1,6 @@
 import React from "react";
+// Routing
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // Components
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
@@ -16,16 +18,32 @@ function App() {
   const Styles = useStyles();
 
   return (
-    <Box className={Styles.root}>
-      <Background />
-      <Navbar />
-      <SplashPage />
-      <AboutMe />
-      <ProjectPage />
-      <SkillsPage />
-      <ContactPage />
-      <Footer />
-    </Box>
+    <Router>
+      <Box className={Styles.root}>
+        <Background />
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <SplashPage />
+            <AboutMe />
+            <ProjectPage />
+            <SkillsPage />
+          </Route>
+          <Route path="/about">
+            <AboutMe />
+          </Route>
+          <Route path="/projects">
+            <ProjectPage />
+          </Route>
+          <Route path="/skills">
+            <SkillsPage />
+          </Route>
+          <Route path="/contact" />
+        </Switch>
+        <ContactPage />
+        <Footer />
+      </Box>
+    </Router>
   );
 }
 
