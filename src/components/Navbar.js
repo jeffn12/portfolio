@@ -16,7 +16,7 @@ function Navbar() {
       <CssBaseline />
       <ElevationScroll>
         <AppBar className={Styles.appBar}>
-          <Toolbar noGutters>
+          <Toolbar disableGutters>
             <div className={Styles.linkText}>About Me</div>
             <div className={Styles.linkText}>Projects</div>
             <div className={Styles.linkText}>Skills</div>
@@ -39,13 +39,14 @@ const useStyles = makeStyles({
   },
   appBar: {
     backgroundColor: "transparent",
-    alignItems: "flex-end"
+    alignItems: "flex-end",
+    padding: "0 0.5rem"
   },
   linkText: {
     fontFamily: "Lora",
     fontSize: "1.2rem",
     fontColor: "#aaa",
-    marginLeft: "1rem"
+    margin: "0 .5rem"
   }
 });
 
