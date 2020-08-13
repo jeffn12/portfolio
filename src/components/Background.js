@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-// Images
-import { background } from "../images";
 
 function Background() {
   const [opacity, setOpacity] = useState(1);
