@@ -21,11 +21,20 @@ function AboutMe() {
       >
         <Typography
           align="right"
-          style={{ fontSize: "2.5rem", marginBottom: "1rem" }}
+          style={{
+            fontSize: "2.5rem",
+            marginBottom: "1rem"
+          }}
         >
           My name is Jeff Neuberger
         </Typography>
-        <Typography align="right" style={{ fontSize: "1.3rem", width: "80%" }}>
+        <Typography
+          align="right"
+          style={{
+            fontSize: "1.3rem",
+            width: "80%"
+          }}
+        >
           {ABOUT_ME}
         </Typography>
       </Box>

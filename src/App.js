@@ -37,6 +37,6 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     minWidth: "375px",
-    margin: "0rem 2rem"
+    margin: "0rem 1rem"
   }
 });

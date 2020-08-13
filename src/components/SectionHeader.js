@@ -1,24 +1,25 @@
 import React from "react";
 // Material UI
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Divider } from "@material-ui/core";
 
 function SectionHeader(props) {
   return (
     <Box
       style={{
         alignSelf: "flex-start",
-        marginBottom: "2rem"
+        marginBottom: "6rem"
       }}
     >
       <Typography
         variant="h2"
         style={{
-          fontStyle: "italic"
+          fontStyle: "italic",
+          fontWeight: "lighter"
         }}
       >
         {props.title}
       </Typography>
-      <hr />
+      <Divider light={false} />
     </Box>
   );
 }
