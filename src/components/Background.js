@@ -20,10 +20,9 @@ function Background() {
   }, []);
 
   return (
-    <React.Fragment>
+    <>
       <div
         style={{
-          display: "block",
           padding: 0,
           position: "fixed",
           top: 0,
@@ -39,18 +38,18 @@ function Background() {
             opacity: opacity,
             filter: `blur(${filter}px) brightness(0.7)`,
             position: "absolute",
-            background: `url(${background}) center center`,
+            background: `url("https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE3MzYxfQ&auto=format&fit=crop&w=995&q=80") center center`,
             backgroundSize: "cover",
             top: "-10%",
             bottom: "-10%",
             left: "-10%",
             right: "-10%",
-            width: "120%"
-            //height: "120%"
+            width: "120%",
+            height: window.outerHeight
           }}
         />
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
