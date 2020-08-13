@@ -43,7 +43,7 @@ function Background() {
             left: "-10%",
             right: "-10%",
             width: "120%",
-            height: window.outerHeight
+            height: "120%"
           }}
         />
       </div>

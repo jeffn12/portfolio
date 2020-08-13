@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     margin: "2rem 1rem",
-    width: "17rem"
+    width: "300px"
   },
   title: {
     fontSize: "1.5rem",
