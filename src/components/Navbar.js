@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Routing
 import { NavLink, withRouter } from "react-router-dom";
 // Material UI
@@ -7,22 +7,28 @@ import {
   Toolbar,
   useScrollTrigger,
   CssBaseline,
-  useMediaQuery
+  useMediaQuery,
+  IconButton,
+  Drawer,
+  ListItem,
+  Typography
 } from "@material-ui/core";
+import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import { makeStyles } from "@material-ui/styles";
 
-function Navbar() {
+function Navbar(props) {
   const Styles = useStyles();
+  // Determine whether user is accessing site on a small screen
   const isSmallScreen = useMediaQuery("(max-width:470px)");
-  console.log(isSmallScreen);
+
   return (
     <div className={Styles.root}>
       <CssBaseline />
-      <ElevationScroll>
+      <ElevationScroll isSmallScreen={isSmallScreen}>
         <AppBar className={Styles.appBar}>
           <Toolbar disableGutters>
             {isSmallScreen ? (
-              <NavLink to="/">Small Screen!</NavLink>
+              <SmallScreenNav Styles={Styles} {...props} />
             ) : (
               <FullScreenNav Styles={Styles} />
             )}
@@ -43,7 +49,6 @@ const useStyles = makeStyles({
     zIndex: 1
   },
   appBar: {
-    //backgroundColor: "transparent",
     alignItems: "flex-end",
     padding: "0 0.5rem"
   },
@@ -57,13 +62,19 @@ const useStyles = makeStyles({
     textDecoration: "none"
   },
   activeLink: {
+    display: "inline",
+    fontFamily: "Lora",
     color: "#eee",
-    fontWeight: 800
+    fontWeight: 800,
+    fontSize: "1.2rem",
+    margin: "0 .75rem",
+    textDecoration: "none",
+    fontStyle: "italic"
   }
 });
 
 const ElevationScroll = (props) => {
-  const { children } = props;
+  const { children, isSmallScreen } = props;
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -71,9 +82,10 @@ const ElevationScroll = (props) => {
   });
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
+    elevation: !isSmallScreen && trigger ? 4 : 0,
     style: {
-      backgroundColor: trigger ? "rgb(150,150,150)" : "transparent",
+      backgroundColor:
+        !isSmallScreen && trigger ? "rgb(150,150,150)" : "transparent",
       opacity: 0.8
     }
   });
@@ -88,6 +100,7 @@ const FullScreenNav = (props) => {
         to="/"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
       >
         Home
       </NavLink>
@@ -95,6 +108,7 @@ const FullScreenNav = (props) => {
         to="/about"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
       >
         About Me
       </NavLink>
@@ -102,6 +116,7 @@ const FullScreenNav = (props) => {
         to="/projects"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
       >
         Projects
       </NavLink>
@@ -109,6 +124,7 @@ const FullScreenNav = (props) => {
         to="/skills"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
       >
         Skills
       </NavLink>
@@ -116,9 +132,110 @@ const FullScreenNav = (props) => {
         to="/contact"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
       >
         Contact
-      </NavLink>{" "}
+      </NavLink>
+    </>
+  );
+};
+
+const SmallScreenNav = (props) => {
+  const { Styles, history, location } = props;
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <>
+      <IconButton
+        edge="end"
+        style={{ marginRight: "-.50rem" }}
+        onClick={handleClick}
+      >
+        <MenuRoundedIcon fontSize="large" />
+      </IconButton>
+      <Drawer
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        anchor="right"
+        PaperProps={{
+          style: { backgroundColor: "rgb(150,150,150)", height: "auto" }
+        }}
+      >
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/" ? Styles.activeLink : Styles.linkText
+            }
+          >
+            Home
+          </Typography>
+        </ListItem>
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/about"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/about"
+                ? Styles.activeLink
+                : Styles.linkText
+            }
+          >
+            About Me
+          </Typography>
+        </ListItem>
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/projects"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/projects"
+                ? Styles.activeLink
+                : Styles.linkText
+            }
+          >
+            Projects
+          </Typography>
+        </ListItem>
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/contact"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/contact"
+                ? Styles.activeLink
+                : Styles.linkText
+            }
+          >
+            Contact Me
+          </Typography>
+        </ListItem>
+      </Drawer>
     </>
   );
 };
