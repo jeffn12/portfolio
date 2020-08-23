@@ -1,49 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 // Routing
-import { Link, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 // Material UI
 import {
   AppBar,
   Toolbar,
   useScrollTrigger,
-  CssBaseline
+  CssBaseline,
+  useMediaQuery,
+  IconButton,
+  Drawer,
+  ListItem,
+  Typography
 } from "@material-ui/core";
+import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import { makeStyles } from "@material-ui/styles";
 
 function Navbar(props) {
   const Styles = useStyles();
-  const { pathname } = props.location;
+  // Determine whether user is accessing site on a small screen
+  const isSmallScreen = useMediaQuery("(max-width:470px)");
 
   return (
     <div className={Styles.root}>
       <CssBaseline />
-      <ElevationScroll>
+      <ElevationScroll isSmallScreen={isSmallScreen}>
         <AppBar className={Styles.appBar}>
           <Toolbar disableGutters>
-            {pathname !== "/" && (
-              <Link to="/" className={Styles.linkText}>
-                Home
-              </Link>
-            )}
-            {pathname !== "/about" && (
-              <Link to="/about" className={Styles.linkText}>
-                About Me
-              </Link>
-            )}
-            {pathname !== "/projects" && (
-              <Link to="/projects" className={Styles.linkText}>
-                Projects
-              </Link>
-            )}
-            {pathname !== "/skills" && (
-              <Link to="/skills" className={Styles.linkText}>
-                Skills
-              </Link>
-            )}
-            {pathname !== "/contact" && (
-              <Link to="/contact" className={Styles.linkText}>
-                Contact
-              </Link>
+            {isSmallScreen ? (
+              <SmallScreenNav Styles={Styles} {...props} />
+            ) : (
+              <FullScreenNav Styles={Styles} />
             )}
           </Toolbar>
         </AppBar>
@@ -62,22 +49,32 @@ const useStyles = makeStyles({
     zIndex: 1
   },
   appBar: {
-    backgroundColor: "transparent",
     alignItems: "flex-end",
     padding: "0 0.5rem"
   },
   linkText: {
+    display: "inline",
     fontFamily: "Lora",
     fontWeight: 500,
     fontSize: "1.2rem",
-    color: "#ccc",
-    margin: "0 .5rem",
+    color: "#ddd",
+    margin: "0 .75rem",
     textDecoration: "none"
+  },
+  activeLink: {
+    display: "inline",
+    fontFamily: "Lora",
+    color: "#eee",
+    fontWeight: 800,
+    fontSize: "1.2rem",
+    margin: "0 .75rem",
+    textDecoration: "none",
+    fontStyle: "italic"
   }
 });
 
 const ElevationScroll = (props) => {
-  const { children } = props;
+  const { children, isSmallScreen } = props;
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -85,10 +82,160 @@ const ElevationScroll = (props) => {
   });
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
+    elevation: !isSmallScreen && trigger ? 4 : 0,
     style: {
-      backgroundColor: trigger ? "rgb(150,150,150)" : "transparent",
+      backgroundColor:
+        !isSmallScreen && trigger ? "rgb(150,150,150)" : "transparent",
       opacity: 0.8
     }
   });
+};
+
+const FullScreenNav = (props) => {
+  const { Styles } = props;
+  return (
+    <>
+      <NavLink
+        exact
+        to="/"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
+      >
+        About Me
+      </NavLink>
+      <NavLink
+        to="/projects"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
+      >
+        Projects
+      </NavLink>
+      <NavLink
+        to="/skills"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
+      >
+        Skills
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+        style={{ pointerEvents: "none" }}
+      >
+        Contact
+      </NavLink>
+    </>
+  );
+};
+
+const SmallScreenNav = (props) => {
+  const { Styles, history, location } = props;
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <>
+      <IconButton
+        edge="end"
+        style={{ marginRight: "-.50rem" }}
+        onClick={handleClick}
+      >
+        <MenuRoundedIcon fontSize="large" />
+      </IconButton>
+      <Drawer
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        anchor="right"
+        PaperProps={{
+          style: { backgroundColor: "rgb(150,150,150)", height: "auto" }
+        }}
+      >
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/" ? Styles.activeLink : Styles.linkText
+            }
+          >
+            Home
+          </Typography>
+        </ListItem>
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/about"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/about"
+                ? Styles.activeLink
+                : Styles.linkText
+            }
+          >
+            About Me
+          </Typography>
+        </ListItem>
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/projects"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/projects"
+                ? Styles.activeLink
+                : Styles.linkText
+            }
+          >
+            Projects
+          </Typography>
+        </ListItem>
+        <ListItem
+          onClick={() => {
+            setAnchorEl(null);
+            setTimeout(() => history.push("/contact"), 40); // make sure that drawer is fully closed before navigating
+          }}
+          style={{ backgroundColor: "rgb(150,150,150)", cursor: "pointer" }}
+        >
+          <Typography
+            className={
+              location.pathname === "/contact"
+                ? Styles.activeLink
+                : Styles.linkText
+            }
+          >
+            Contact Me
+          </Typography>
+        </ListItem>
+      </Drawer>
+    </>
+  );
 };
