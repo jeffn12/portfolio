@@ -30,7 +30,7 @@ function Background() {
           zIndex: -1
         }}
       >
-        <img
+        <div
           alt="double doors open to possibilities"
           style={{
             opacity: opacity,
@@ -43,7 +43,8 @@ function Background() {
             left: "-10%",
             right: "-10%",
             width: "120%",
-            height: "120vh"
+            height: window.screen.height + 25,
+            backgroundAttachment: "scroll"
           }}
         />
       </div>
