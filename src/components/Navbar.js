@@ -100,7 +100,6 @@ const FullScreenNav = (props) => {
         to="/"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
-        style={{ pointerEvents: "none" }}
       >
         Home
       </NavLink>
@@ -108,7 +107,6 @@ const FullScreenNav = (props) => {
         to="/about"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
-        style={{ pointerEvents: "none" }}
       >
         About Me
       </NavLink>
@@ -116,7 +114,6 @@ const FullScreenNav = (props) => {
         to="/projects"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
-        style={{ pointerEvents: "none" }}
       >
         Projects
       </NavLink>
@@ -124,7 +121,6 @@ const FullScreenNav = (props) => {
         to="/skills"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
-        style={{ pointerEvents: "none" }}
       >
         Skills
       </NavLink>
@@ -132,7 +128,6 @@ const FullScreenNav = (props) => {
         to="/contact"
         className={Styles.linkText}
         activeClassName={Styles.activeLink}
-        style={{ pointerEvents: "none" }}
       >
         Contact
       </NavLink>
