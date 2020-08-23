@@ -4,12 +4,13 @@ import { Box, Typography, Link as MUILink, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 function Project(props) {
-  const { title, description, codeURL, liveURL } = props.project;
+  const { title, description, techStack, codeURL, liveURL } = props.project;
   const Styles = useStyles();
 
   return (
     <Box className={Styles.project}>
       <Typography className={Styles.title}>{title}</Typography>
+      <Typography className={Styles.techStack}>{techStack}</Typography>
       <Typography className={Styles.description}>{description}</Typography>
       <Box>
         <MUILink className={Styles.link} href={codeURL} target="_blank">
@@ -44,6 +45,10 @@ const useStyles = makeStyles({
     textAlign: "center",
     fontWeight: 500,
     margin: "2rem 0"
+  },
+  techStack: {
+    fontFamily: "Montserrat",
+    fontWeight: 600
   },
   button: {
     width: "8rem",
