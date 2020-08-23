@@ -6,59 +6,64 @@ import {
   AppBar,
   Toolbar,
   useScrollTrigger,
-  CssBaseline
+  CssBaseline,
+  useMediaQuery,
+  Typography
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 function Navbar() {
   const Styles = useStyles();
-
+  const isSmallScreen = useMediaQuery("(max-width:470px)");
+  console.log(isSmallScreen);
   return (
     <div className={Styles.root}>
       <CssBaseline />
       <ElevationScroll>
         <AppBar className={Styles.appBar}>
           <Toolbar disableGutters>
-            <NavLink
-              exact
-              to="/"
-              className={Styles.linkText}
-              activeClassName={Styles.activeLink}
-            >
-              Home
-            </NavLink>
-
-            <NavLink
-              to="/about"
-              className={Styles.linkText}
-              activeClassName={Styles.activeLink}
-            >
-              About Me
-            </NavLink>
-
-            <NavLink
-              to="/projects"
-              className={Styles.linkText}
-              activeClassName={Styles.activeLink}
-            >
-              Projects
-            </NavLink>
-
-            <NavLink
-              to="/skills"
-              className={Styles.linkText}
-              activeClassName={Styles.activeLink}
-            >
-              Skills
-            </NavLink>
-
-            <NavLink
-              to="/contact"
-              className={Styles.linkText}
-              activeClassName={Styles.activeLink}
-            >
-              Contact
-            </NavLink>
+            {isSmallScreen ? (
+              <NavLink to="/">Small Screen!</NavLink>
+            ) : (
+              <>
+                <NavLink
+                  exact
+                  to="/"
+                  className={Styles.linkText}
+                  activeClassName={Styles.activeLink}
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  to="/about"
+                  className={Styles.linkText}
+                  activeClassName={Styles.activeLink}
+                >
+                  About Me
+                </NavLink>
+                <NavLink
+                  to="/projects"
+                  className={Styles.linkText}
+                  activeClassName={Styles.activeLink}
+                >
+                  Projects
+                </NavLink>
+                <NavLink
+                  to="/skills"
+                  className={Styles.linkText}
+                  activeClassName={Styles.activeLink}
+                >
+                  Skills
+                </NavLink>
+                <NavLink
+                  to="/contact"
+                  className={Styles.linkText}
+                  activeClassName={Styles.activeLink}
+                >
+                  Contact
+                </NavLink>{" "}
+              </>
+            )}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
@@ -76,7 +81,7 @@ const useStyles = makeStyles({
     zIndex: 1
   },
   appBar: {
-    backgroundColor: "transparent",
+    //backgroundColor: "transparent",
     alignItems: "flex-end",
     padding: "0 0.5rem"
   },
