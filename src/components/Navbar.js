@@ -1,6 +1,6 @@
 import React from "react";
 // Routing
-import { Link, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 // Material UI
 import {
   AppBar,
@@ -20,31 +20,46 @@ function Navbar(props) {
       <ElevationScroll>
         <AppBar className={Styles.appBar}>
           <Toolbar disableGutters>
-            {pathname !== "/" && (
-              <Link to="/" className={Styles.linkText}>
-                Home
-              </Link>
-            )}
-            {pathname !== "/about" && (
-              <Link to="/about" className={Styles.linkText}>
-                About Me
-              </Link>
-            )}
-            {pathname !== "/projects" && (
-              <Link to="/projects" className={Styles.linkText}>
-                Projects
-              </Link>
-            )}
-            {pathname !== "/skills" && (
-              <Link to="/skills" className={Styles.linkText}>
-                Skills
-              </Link>
-            )}
-            {pathname !== "/contact" && (
-              <Link to="/contact" className={Styles.linkText}>
-                Contact
-              </Link>
-            )}
+            <NavLink
+              exact
+              to="/"
+              className={Styles.linkText}
+              activeClassName={Styles.activeLink}
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/about"
+              className={Styles.linkText}
+              activeClassName={Styles.activeLink}
+            >
+              About Me
+            </NavLink>
+
+            <NavLink
+              to="/projects"
+              className={Styles.linkText}
+              activeClassName={Styles.activeLink}
+            >
+              Projects
+            </NavLink>
+
+            <NavLink
+              to="/skills"
+              className={Styles.linkText}
+              activeClassName={Styles.activeLink}
+            >
+              Skills
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              className={Styles.linkText}
+              activeClassName={Styles.activeLink}
+            >
+              Contact
+            </NavLink>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
@@ -67,12 +82,17 @@ const useStyles = makeStyles({
     padding: "0 0.5rem"
   },
   linkText: {
+    display: "inline",
     fontFamily: "Lora",
     fontWeight: 500,
     fontSize: "1.2rem",
-    color: "#ccc",
-    margin: "0 .5rem",
+    color: "#ddd",
+    margin: "0 .75rem",
     textDecoration: "none"
+  },
+  activeLink: {
+    color: "#eee",
+    fontWeight: 800
   }
 });
 
