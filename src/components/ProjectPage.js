@@ -24,7 +24,7 @@ function ProjectPage() {
                 width: "100%",
                 height: "100%",
                 background: `url(${project.icon})`,
-                backgroundSize: "contain",
+                backgroundSize: "cover",
                 opacity: 0.1,
                 borderRadius: "10px"
               }}
