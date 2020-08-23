@@ -7,8 +7,7 @@ import {
   Toolbar,
   useScrollTrigger,
   CssBaseline,
-  useMediaQuery,
-  Typography
+  useMediaQuery
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
@@ -25,44 +24,7 @@ function Navbar() {
             {isSmallScreen ? (
               <NavLink to="/">Small Screen!</NavLink>
             ) : (
-              <>
-                <NavLink
-                  exact
-                  to="/"
-                  className={Styles.linkText}
-                  activeClassName={Styles.activeLink}
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  className={Styles.linkText}
-                  activeClassName={Styles.activeLink}
-                >
-                  About Me
-                </NavLink>
-                <NavLink
-                  to="/projects"
-                  className={Styles.linkText}
-                  activeClassName={Styles.activeLink}
-                >
-                  Projects
-                </NavLink>
-                <NavLink
-                  to="/skills"
-                  className={Styles.linkText}
-                  activeClassName={Styles.activeLink}
-                >
-                  Skills
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className={Styles.linkText}
-                  activeClassName={Styles.activeLink}
-                >
-                  Contact
-                </NavLink>{" "}
-              </>
+              <FullScreenNav Styles={Styles} />
             )}
           </Toolbar>
         </AppBar>
@@ -115,4 +77,48 @@ const ElevationScroll = (props) => {
       opacity: 0.8
     }
   });
+};
+
+const FullScreenNav = (props) => {
+  const { Styles } = props;
+  return (
+    <>
+      <NavLink
+        exact
+        to="/"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+      >
+        About Me
+      </NavLink>
+      <NavLink
+        to="/projects"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+      >
+        Projects
+      </NavLink>
+      <NavLink
+        to="/skills"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+      >
+        Skills
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={Styles.linkText}
+        activeClassName={Styles.activeLink}
+      >
+        Contact
+      </NavLink>{" "}
+    </>
+  );
 };
