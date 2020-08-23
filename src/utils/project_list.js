@@ -18,7 +18,7 @@ export const PROJECT_LIST = [
     icon: would_you_rather
   },
   {
-    title: "Mobile Flashcards App",
+    title: "Mobile Flashcards",
     description:
       "Flashcards application for iOS, Android, and Web written with React Native and Redux. " +
       "Create multiple decks, add your own cards, and quiz yourself on what you want to remember.",
@@ -47,7 +47,7 @@ export const PROJECT_LIST = [
     icon: issue_tracker
   },
   {
-    title: "Anonymous Message Board",
+    title: "Message Board",
     description:
       "Express server and API to a MongoDB database for an Anonymous Message Board.  React front end coming soon!",
     techStack: "Express, MongoDB",
