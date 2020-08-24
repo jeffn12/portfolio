@@ -18,6 +18,13 @@ function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const handleSubmit = () => {
+    // check if email address is valid.  If not, ask the user to provide a valid email
+    // if email address is valid, send API request to Lambda
+  };
+
+  const isValidEmail = () => {};
+
   return (
     <Box className={Styles.root}>
       <Typography className={Styles.header}>Send Me A Message</Typography>
@@ -89,14 +96,15 @@ export default ContactForm;
 const useStyles = makeStyles({
   root: {
     width: "95%",
-    minWidth: "420px",
+    minWidth: "400px",
     display: "flex",
     padding: "1rem",
     flexDirection: "column",
     alignItems: "center",
     backgroundColor: "rgba(120,120,120,0.5)",
     borderRadius: "8px",
-    margin: "2rem"
+    margin: "2rem",
+    marginTop: "0"
   },
   header: {
     fontFamily: "Montserrat",
@@ -106,7 +114,22 @@ const useStyles = makeStyles({
     marginLeft: ".8rem"
   },
   textbox: {
-    width: "95%"
+    width: "95%",
+    "& label.Mui-focused": {
+      color: "black",
+      fontFamily: "Lora"
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "black"
+      },
+      "&:hover fieldset": {
+        borderColor: "black"
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "black"
+      }
+    }
   },
   textboxFont: {
     fontFamily: "Lora"
