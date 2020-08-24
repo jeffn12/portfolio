@@ -36,9 +36,9 @@ function AboutMe() {
           }}
         >
           I am a driven educator and lifelong learner leveraging my experience
-          in STEM and technology instruction to designing and developing
-          meaningful software solutions. I feel that controlling your own path
-          is the key to truly opening the doors to learning.
+          in STEM and technology instruction to design and develop meaningful
+          software solutions. I feel that controlling your own path is the key
+          to truly opening the doors to long-lasting learning.
         </Typography>
         <br></br>
         <Typography
@@ -52,7 +52,7 @@ function AboutMe() {
           My goal is to create software and web applications that support
           learners on a large scale realize their own potential. I am passionate
           about user feedback, data-driven decision making, and organizing
-          solutions in a meaninful way.
+          solutions in an intuitive and meaningful way.
         </Typography>
       </Box>
     </>
