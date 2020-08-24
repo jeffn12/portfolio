@@ -64,7 +64,9 @@ const useStyles = makeStyles({
   },
   fab: {
     position: "fixed",
-    bottom: 15,
-    right: 15
+    bottom: 20,
+    right: 20,
+    backgroundColor: "#222",
+    opacity: 0.9
   }
 });
