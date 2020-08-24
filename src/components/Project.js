@@ -4,13 +4,27 @@ import { Box, Typography, Link as MUILink, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 function Project(props) {
-  const { title, description, codeURL, liveURL } = props.project;
+  const { title, description, techStack, codeURL, liveURL } = props.project;
   const Styles = useStyles();
 
   return (
     <Box className={Styles.project}>
-      <Typography className={Styles.title}>{title}</Typography>
-      <Typography className={Styles.description}>{description}</Typography>
+      <Box
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          padding: ".5rem 0"
+        }}
+        borderBottom={1}
+      >
+        <Typography className={Styles.title}>{title}</Typography>
+        <Typography className={Styles.techStack}>({techStack})</Typography>
+      </Box>
+      <Box style={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+        <Typography className={Styles.description}>{description}</Typography>
+      </Box>
       <Box>
         <MUILink className={Styles.link} href={codeURL} target="_blank">
           <Button className={Styles.button}>See the Code</Button>
@@ -30,20 +44,27 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: "2rem 1rem"
+    justifyContent: "space-around",
+    margin: "2rem 1rem",
+    height: "inherit",
+    padding: ".75rem"
   },
   title: {
     fontFamily: "Montserrat",
     fontSize: "1.7rem",
     fontWeight: 900,
-    textAlign: "center"
+    textAlign: "center",
+    margin: 0
   },
   description: {
     fontFamily: "Lora",
-    fontSize: "1.2rem",
+    fontSize: "1.1rem",
     textAlign: "center",
-    fontWeight: 500,
-    margin: "2rem 0"
+    fontWeight: 500
+  },
+  techStack: {
+    fontFamily: "Montserrat",
+    fontWeight: 600
   },
   button: {
     width: "8rem",

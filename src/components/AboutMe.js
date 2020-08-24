@@ -31,11 +31,28 @@ function AboutMe() {
           align="right"
           style={{
             fontFamily: "Lora",
-            fontSize: "1.3rem",
+            fontSize: "1.4rem",
             width: "80%"
           }}
         >
-          {ABOUT_ME}
+          I am a driven educator and lifelong learner leveraging my experience
+          in STEM and technology instruction to design and develop meaningful
+          software solutions. I feel that controlling your own path is the key
+          to truly opening the doors to long-lasting learning.
+        </Typography>
+        <br></br>
+        <Typography
+          align="right"
+          style={{
+            fontFamily: "Lora",
+            fontSize: "1.4rem",
+            width: "80%"
+          }}
+        >
+          My goal is to create software and web applications that support
+          learners on a large scale realize their own potential. I am passionate
+          about user feedback, data-driven decision making, and organizing
+          solutions in an intuitive and meaningful way.
         </Typography>
       </Box>
     </>
@@ -43,8 +60,3 @@ function AboutMe() {
 }
 
 export default AboutMe;
-
-const ABOUT_ME = `I am a teacher turned software engineer, and I feel that controlling your own 
-  path is the key to truly opening the doors to learning. I want to support learners on a large scale 
-  realize their abilities through quality web applications. I am passionate about data, and
-  I truly love any project that involves a database!`;
