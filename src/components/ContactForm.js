@@ -18,9 +18,11 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogTitle
+  DialogTitle,
+  Snackbar
 } from "@material-ui/core";
 import DialogContextText from "@material-ui/core/DialogContentText";
+import MuiAlert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/styles";
 
 const SEND_MESSAGE_URI =
@@ -32,6 +34,8 @@ function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [open, setOpen] = useState(false);
+  const [successOpen, setSuccessOpen] = useState(false);
+  const [failureOpen, setFailureOpen] = useState(false);
 
   const handleSubmit = () => {
     isValidEmail() ? sendMessage() : setOpen(true);
@@ -54,9 +58,22 @@ function ContactForm() {
         })
       )
       .then((res) => {
+        setSuccessOpen(true);
         clearForm();
       })
       .catch((err) => console.log(err));
+  };
+
+  const handleSuccessClose = (event, reason) => {
+    console.log("closing success snack");
+    if (reason === "clickaway") return;
+    setSuccessOpen(false);
+    console.log(successOpen);
+  };
+
+  const handleFailureClose = (event, reason) => {
+    if (reason === "clickaway") return;
+    setFailureOpen(false);
   };
 
   const clearForm = () => {
@@ -130,6 +147,34 @@ function ContactForm() {
       >
         SEND
       </Button>
+      <Snackbar
+        open={successOpen}
+        autoHideDuration={6000}
+        onClose={handleSuccessClose}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          onClose={handleSuccessClose}
+          severity="success"
+        >
+          Message Sent!
+        </MuiAlert>
+      </Snackbar>
+      <Snackbar
+        open={failureOpen}
+        autoHideDuration={6000}
+        onClose={handleFailureClose}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          onClose={handleFailureClose}
+          severity="error"
+        >
+          Message not sent. Please try again.
+        </MuiAlert>
+      </Snackbar>
     </Box>
   );
 }
