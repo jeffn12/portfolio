@@ -9,14 +9,16 @@ import {
   heroku,
   surge,
   aws,
-  materialui
+  materialui,
+  html,
+  css
 } from "../images";
 
 export const SKILL_LIST = [
   {
-    skill: "JavaScript",
+    skill: "JavaScript (ES6+)",
     icon: javascript,
-    iconHasText: true
+    iconHasText: false
   },
   {
     skill: "Node.js",
@@ -72,5 +74,15 @@ export const SKILL_LIST = [
     skill: "Amazon Web Services (AWS)",
     icon: aws,
     iconHasText: true
+  },
+  {
+    skill: "HTML 5",
+    icon: html,
+    iconHasText: false
+  },
+  {
+    skill: "CSS 3",
+    icon: css,
+    iconHasText: false
   }
 ];
