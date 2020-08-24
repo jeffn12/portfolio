@@ -1,6 +1,7 @@
 import React from "react";
 // Components
 import Contact from "./Contact";
+import ContactForm from "./ContactForm";
 // Material UI
 import { Box } from "@material-ui/core";
 import SectionHeader from "./SectionHeader";
@@ -11,6 +12,7 @@ function ContactPage() {
   return (
     <>
       <SectionHeader title="Contact Me" />
+      <ContactForm />
       <Box style={{ display: "flex", flexWrap: "wrap", minWidth: "5rem" }}>
         {CONTACTS.map((contact) => (
           <Contact key={contact.contactType} contact={contact} />
