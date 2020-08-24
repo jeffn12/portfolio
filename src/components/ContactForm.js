@@ -8,6 +8,7 @@
  */
 
 import React, { useState } from "react";
+import axios from "axios";
 // Material UI
 import {
   Box,
@@ -21,6 +22,9 @@ import {
 } from "@material-ui/core";
 import DialogContextText from "@material-ui/core/DialogContentText";
 import { makeStyles } from "@material-ui/styles";
+
+const SEND_MESSAGE_URI =
+  "https://ruwmvgzn17.execute-api.us-east-2.amazonaws.com/default/Contact-Me-Form";
 
 function ContactForm() {
   const Styles = useStyles();
@@ -40,7 +44,19 @@ function ContactForm() {
   };
 
   const sendMessage = () => {
-    clearForm();
+    axios
+      .post(
+        SEND_MESSAGE_URI,
+        JSON.stringify({
+          sender: name,
+          email,
+          message
+        })
+      )
+      .then((res) => {
+        clearForm();
+      })
+      .catch((err) => console.log(err));
   };
 
   const clearForm = () => {
