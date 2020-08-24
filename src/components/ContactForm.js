@@ -174,7 +174,7 @@ const useStyles = makeStyles({
     backgroundColor: "rgba(120,120,120,0.5)",
     borderRadius: "8px",
     margin: "2rem",
-    marginTop: "0"
+    marginTop: ".5rem"
   },
   header: {
     fontFamily: "Montserrat",
