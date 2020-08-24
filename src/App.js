@@ -10,6 +10,7 @@ import ProjectPage from "./components/ProjectPage";
 import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
 import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 // Material UI
 import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
@@ -38,7 +39,9 @@ function App() {
           <Route path="/skills">
             <SkillsPage />
           </Route>
-          <Route path="/contact" />
+          <Route path="/contact">
+            <ContactForm />
+          </Route>
         </Switch>
         <ContactPage />
         <Footer />
