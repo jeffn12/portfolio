@@ -1,12 +1,3 @@
-/**
- * Lambda Endpoint: https://ruwmvgzn17.execute-api.us-east-2.amazonaws.com/default/Contact-Me-Form
- * Body Structure: {
- *                    "sender": String, required,
- *                    "message": String, required,
- *                    "email": Email, required,
- *                 }
- */
-
 import React, { useState } from "react";
 import axios from "axios";
 // Material UI
