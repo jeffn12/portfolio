@@ -9,7 +9,17 @@
 
 import React, { useState } from "react";
 // Material UI
-import { Box, Button, Typography, TextField } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Typography,
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle
+} from "@material-ui/core";
+import DialogContextText from "@material-ui/core/DialogContentText";
 import { makeStyles } from "@material-ui/styles";
 
 function ContactForm() {
@@ -17,16 +27,23 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [open, setOpen] = useState(false);
 
   const handleSubmit = () => {
-    // check if email address is valid.  If not, ask the user to provide a valid email
-    // if email address is valid, send API request to Lambda
+    isValidEmail() ? sendMessage() : setOpen(true);
   };
 
-  const isValidEmail = () => {};
+  const isValidEmail = () => {
+    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      email
+    );
+  };
+
+  const sendMessage = () => {};
 
   return (
     <Box className={Styles.root}>
+      <AlertDialog open={open} setOpen={setOpen} />
       <Typography className={Styles.header}>Send Me A Message</Typography>
       <TextField
         id="name"
@@ -84,6 +101,7 @@ function ContactForm() {
       <Button
         className={Styles.submitBtn}
         disabled={name === "" || email === "" || message === ""}
+        onClick={handleSubmit}
       >
         SEND
       </Button>
@@ -92,6 +110,33 @@ function ContactForm() {
 }
 
 export default ContactForm;
+
+function AlertDialog({ open, setOpen }) {
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogTitle id="alert-dialog-title">{"Invalid Email"}</DialogTitle>
+      <DialogContent>
+        <DialogContextText id="alert-dialog-description">
+          Please enter a valid email address and try again.
+        </DialogContextText>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={handleClose} color="primary" autoFocus>
+          OK
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+}
 
 const useStyles = makeStyles({
   root: {
