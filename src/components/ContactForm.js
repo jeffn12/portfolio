@@ -125,6 +125,7 @@ function ContactForm() {
       <Button
         className={Styles.submitBtn}
         disabled={name === "" || email === "" || message === ""}
+        fullWidth
         onClick={handleSubmit}
       >
         SEND
@@ -204,8 +205,7 @@ const useStyles = makeStyles({
     fontFamily: "Lora"
   },
   submitBtn: {
-    alignSelf: "flex-end",
-    width: "8rem",
+    width: "95%",
     margin: ".8rem 1rem",
     backgroundColor: "#aaa",
     fontFamily: "Montserrat"
