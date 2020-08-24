@@ -11,11 +11,10 @@ import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
 import Footer from "./components/Footer";
 // Material UI
-import { Box, Fab } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import MailOutlineRoundedIcon from "@material-ui/icons/MailOutlineRounded";
 
-function App() {
+function App(props) {
   const Styles = useStyles();
 
   return (
@@ -45,9 +44,6 @@ function App() {
           </Route>
         </Switch>
         <Footer />
-        <Fab className={Styles.fab} color="primary">
-          <MailOutlineRoundedIcon />
-        </Fab>
       </Box>
     </Router>
   );
@@ -61,12 +57,5 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     margin: "0rem 1rem"
-  },
-  fab: {
-    position: "fixed",
-    bottom: 20,
-    right: 20,
-    backgroundColor: "#222",
-    opacity: 0.9
   }
 });

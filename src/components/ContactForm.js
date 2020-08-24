@@ -207,8 +207,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     backgroundColor: "rgba(120,120,120,0.5)",
     borderRadius: "8px",
-    margin: "2rem",
-    marginTop: ".5rem"
+    margin: "1rem"
   },
   header: {
     fontFamily: "Montserrat",

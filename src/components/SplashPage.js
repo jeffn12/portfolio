@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 // Material UI
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Fab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import MailOutlineRoundedIcon from "@material-ui/icons/MailOutlineRounded";
 // Media Queries
 import { MediaQuery } from "../media";
 
-function SplashPage() {
+function SplashPage(props) {
   const [windowHeight, setWindowHeight] = useState(
     document.documentElement.clientHeight
   );
@@ -35,11 +37,18 @@ function SplashPage() {
       <Typography className={Styles.subTitle}>
         I use code and design to open the doors of possibility.
       </Typography>
+      {/* <Fab
+        onClick={() => props.history.push("/contact")}
+        className={Styles.fab}
+        color="primary"
+      >
+        <MailOutlineRoundedIcon />
+      </Fab> */}
     </Box>
   );
 }
 
-export default SplashPage;
+export default withRouter(SplashPage);
 
 const useStyles = makeStyles({
   root: {
@@ -58,5 +67,11 @@ const useStyles = makeStyles({
     fontFamily: "Lora",
     fontSize: "1.5rem",
     textAlign: "center"
+  },
+  fab: {
+    position: "fixed",
+    bottom: 20,
+    right: 20,
+    backgroundColor: "#222"
   }
 });
