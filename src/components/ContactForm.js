@@ -205,7 +205,7 @@ const useStyles = makeStyles({
     padding: "1rem",
     flexDirection: "column",
     alignItems: "center",
-    backgroundColor: "rgba(120,120,120,0.5)",
+    backgroundColor: "rgba(120,120,120,0.7)",
     borderRadius: "8px",
     margin: "1rem"
   },
