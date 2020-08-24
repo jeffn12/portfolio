@@ -16,7 +16,6 @@ function Background() {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
-
   return (
     <>
       <div
@@ -33,7 +32,7 @@ function Background() {
         <div
           alt="double doors open to possibilities"
           style={{
-            opacity: opacity,
+            opacity: !isNaN(opacity) ? opacity : 1,
             filter: `blur(${filter}px) brightness(0.7)`,
             position: "absolute",
             background: `url("https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE3MzYxfQ&auto=format&fit=crop&w=995&q=80") center center`,
