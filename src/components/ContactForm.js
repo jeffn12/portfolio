@@ -56,10 +56,8 @@ function ContactForm() {
   };
 
   const handleSuccessClose = (event, reason) => {
-    console.log("closing success snack");
     if (reason === "clickaway") return;
     setSuccessOpen(false);
-    console.log(successOpen);
   };
 
   const handleFailureClose = (event, reason) => {
