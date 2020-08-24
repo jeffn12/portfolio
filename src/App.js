@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
-function App(props) {
+function App() {
   const Styles = useStyles();
 
   return (
@@ -28,7 +28,6 @@ function App(props) {
             <AboutMe />
             <ProjectPage />
             <SkillsPage />
-            <ContactPage />
           </Route>
           <Route path="/about">
             <AboutMe />
@@ -39,10 +38,9 @@ function App(props) {
           <Route path="/skills">
             <SkillsPage />
           </Route>
-          <Route path="/contact">
-            <ContactPage />
-          </Route>
+          <Route path="/contact" />
         </Switch>
+        <ContactPage />
         <Footer />
       </Box>
     </Router>

@@ -37,13 +37,13 @@ function SplashPage(props) {
       <Typography className={Styles.subTitle}>
         I use code and design to open the doors of possibility.
       </Typography>
-      {/* <Fab
+      <Fab
         onClick={() => props.history.push("/contact")}
         className={Styles.fab}
         color="primary"
       >
         <MailOutlineRoundedIcon />
-      </Fab> */}
+      </Fab>
     </Box>
   );
 }
