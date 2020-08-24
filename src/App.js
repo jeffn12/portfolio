@@ -29,21 +29,24 @@ function App() {
             <AboutMe />
             <ProjectPage />
             <SkillsPage />
+            <ContactMeFab />
           </Route>
           <Route path="/about">
             <AboutMe />
+            <ContactMeFab />
           </Route>
           <Route path="/projects">
             <ProjectPage />
+            <ContactMeFab />
           </Route>
           <Route path="/skills">
             <SkillsPage />
+            <ContactMeFab />
           </Route>
           <Route path="/contact" />
         </Switch>
         <ContactPage />
         <Footer />
-        <ContactMeFab />
       </Box>
     </Router>
   );
