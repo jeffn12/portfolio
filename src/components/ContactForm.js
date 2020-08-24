@@ -39,7 +39,15 @@ function ContactForm() {
     );
   };
 
-  const sendMessage = () => {};
+  const sendMessage = () => {
+    clearForm();
+  };
+
+  const clearForm = () => {
+    setEmail("");
+    setName("");
+    setMessage("");
+  };
 
   return (
     <Box className={Styles.root}>
@@ -73,7 +81,7 @@ function ContactForm() {
         InputLabelProps={{
           classes: { root: Styles.textboxFont }
         }}
-        type="email"
+        value={email}
         onChange={(e) => setEmail(e.target.value)}
         variant="outlined"
         required
