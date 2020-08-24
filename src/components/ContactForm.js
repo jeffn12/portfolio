@@ -179,9 +179,7 @@ const useStyles = makeStyles({
   header: {
     fontFamily: "Montserrat",
     fontWeight: 700,
-    fontSize: "2rem",
-    alignSelf: "flex-start",
-    marginLeft: ".8rem"
+    fontSize: "2rem"
   },
   textbox: {
     width: "95%",
