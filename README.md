@@ -1,15 +1,9 @@
 ## Jeff Neuberger - Developer
 
-Welcome to the repository for my professional portfolio. Feel free to check out my website (link coming soon) with information about me, my projects, and my skills. You can also see my [resume in markdown](/resume.md)
+Welcome to the repository for my web portfolio. Check it out here: [https://jeffneuberger.dev](https://www.jeffneuberger.dev)
 
-##### TODO:
-
-- [x] Artsy Header...
-- [x] About Me
-- [x] Projects
-- [x] Skills
-- [x] Contacts
 
 #### Thanks
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- To my family and friends who have supported me along my journey!
+- [freeCodeCamp](https://freecodecamp.com) for kickstarting my web development adventures!
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
