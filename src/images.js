@@ -19,8 +19,8 @@ export const react = require("./assets/icons/react.svg");
 export const redux = require("./assets/icons/redux.svg");
 export const surge = require("./assets/icons/surge.svg");
 // Project Screenshots
-export const flashcards = require("./assets/project_thumbnails/flashcards.png");
-export const issue_tracker = require("./assets/project_thumbnails/issue_tracker.png");
-export const message_board = require("./assets/project_thumbnails/message_board.png");
-export const myreads = require("./assets/project_thumbnails/myreads.png");
-export const would_you_rather = require("./assets/project_thumbnails/would_you_rather.png");
+export const flashcards = require("./assets/project_thumbnails/flashcards.jpg");
+export const issue_tracker = require("./assets/project_thumbnails/issue_tracker.jpg");
+export const message_board = require("./assets/project_thumbnails/message_board.jpg");
+export const myreads = require("./assets/project_thumbnails/myreads.jpg");
+export const would_you_rather = require("./assets/project_thumbnails/would_you_rather.jpg");
