@@ -233,7 +233,9 @@ const useStyles = makeStyles({
     }
   },
   textboxFont: {
-    fontFamily: "Lora"
+    fontFamily: "Lora",
+    backgroundColor: "#aaa",
+    color: "black"
   },
   submitBtn: {
     width: "95%",
