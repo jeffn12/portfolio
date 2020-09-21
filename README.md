@@ -11,6 +11,9 @@
   <a  href="https://app.netlify.com/sites/jeff-neuberger/deploys">
     <img style="margin-left: 10px;" src="https://api.netlify.com/api/v1/badges/4d983c51-3c4f-4f06-924b-2ec4ed2fd8ff/deploy-status" >
   </a>
+  <a href="https://travis-ci.com/jeffn12/jeffn12.svg?branch=master" target="blank">
+    <img src="https://travis-ci.com/jeffn12/jeffn12.svg?branch=master alt="travis-ci status badge">
+  </a>
 </div>
 
 <!-- LinkedIn Display -->
