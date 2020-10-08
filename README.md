@@ -1,46 +1,38 @@
-## Jeff Neuberger - Developer
-
-##### Hi, I’m Jeff. My background is in education and my work has been focused on students with disabilities, as well as technology education. I enjoy developing assistive technology solutions and web applications. As a driven educator and lifelong learner, I’m currently exploring opportunities in Web Development so that I can help create and provide accessible, customizable problem-solving tools. I'm looking forward to sharing my expertise in special education and passion for development to help create meaningful, life-changing solutions!
-
-<!-- Portfolio Display  -->
-<div style="display: flex; align-items: center">
-  <a href="https://www.jeffneuberger.dev" target="blank" style="display: flex; align-items: center; margin-bottom: 5px;">
-    <img style="width: 40px; height: 40px; margin-right: 10px;" src="./public/favicon-32x32.png">
-    My Portfolio
-  </a>
-  <a  href="https://app.netlify.com/sites/jeff-neuberger/deploys">
-    <img style="margin-left: 10px;" src="https://api.netlify.com/api/v1/badges/4d983c51-3c4f-4f06-924b-2ec4ed2fd8ff/deploy-status" >
-  </a>
-  <a href="https://travis-ci.com/jeffn12/jeffn12.svg?branch=master" target="blank">
-    <img src="https://travis-ci.com/jeffn12/jeffn12.svg?branch=master" alt="travis-ci status badge">
-  </a>
-</div>
-
-<!-- LinkedIn Display -->
-<a href="https://linkedin.com/in/jeffrey-neuberger" target="blank" style="display: flex; align-items: center">
-<img style="width: 40px; height: 40px; margin-right: 10px;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2F2018-social-media-logotypes%2F1000%2F2018_social_media_popular_app_logo_linkedin-512.png&f=1&nofb=1"> 
-My LinkedIn
-</a>
-
-### Currently Learning:
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;"><img style="width: 25px; height: 25px; margin-right: 10px" src="https://duckduckgo.com/i/b3730d88.png">TypeScript</div>
-<div style="display: flex; align-items: center; margin-bottom: 5px;"><img style="width: 25px; height: 25px; margin-right: 10px" src="https://graphql.org/img/logo.svg"> GraphQL</div>
-
-### My Favorite Development Technologies:
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;"><img style="width: 25px; height: 25px; margin-right: 10px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fistvankocsis.gallerycdn.vsassets.io%2Fextensions%2Fistvankocsis%2Freactcodesnippets%2F3.1%2F1582843313592%2FMicrosoft.VisualStudio.Services.Icons.Default&f=1&nofb=1"> React</div>
-<div style="display: flex; align-items: center; margin-bottom: 5px;"><img style="width: 25px; height: 25px; margin-right: 10px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Freduxjs%2Fredux%2Fmaster%2Flogo%2Flogo.png&f=1&nofb=1"> Redux</div>
-<div style="display: flex; align-items: center; margin-bottom: 5px;"><img style="width: 25px; height: 25px; margin-right: 10px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnodejs.org%2Fstatic%2Fimages%2Flogo-hexagon-card.png&f=1&nofb=1"> Node.js</div>
-<div style="display: flex; align-items: center; margin-bottom: 5px;"><img style="width: 25px; height: 25px; margin-right: 10px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpadepokan79.com%2Fimg%2Flogo%2Fexpressjs-min4.png&f=1&nofb=1"> Express</div>
-<div style="display: flex; align-items: center; margin-bottom: 5px;"><img style="width: 25px; height: 25px; margin-right: 10px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyt3.ggpht.com%2Fa-%2FAAuE7mBYnZUzM_JqcgqoK5t4xyl5VtgDAwq8Z06ygQ%3Ds900-mo-c-c0xffffffff-rj-k-no&f=1&nofb=1"> MongoDB</div>
+<h1 >Hi 👋, I'm Jeff</h1>
+<h3 >I'm a passionate developer and education advocate. My work has been focused on supporting individuals with disabilities through technology, as well as technology education. I enjoy developing assistive technology solutions and web applications. As a driven educator and lifelong learner, I’m currently exploring opportunities in Web Development so that I can help create and provide accessible, customizable problem-solving tools. I'm looking forward to sharing my expertise in special education and passion for development to help create meaningful, life-changing solutions!</h3>
 
 #
 
-[![Jeff's github stats](https://github-readme-stats.vercel.app/api?username=jeffn12&hide=stars&count_private=true&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jeffn12&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+🌱 I’m currently learning **Serverless and AWS with Node**
 
-#### Thanks
+👨‍💻 All of my projects are available at [jeffneuberger.dev](https://www.jeffneuberger.dev)
+
+💬 Ask me about **JavaScript, Node.js, React, Teaching, Learning Strategies**
+
+📫 How to reach me **jeffreyneuberger@gmail.com**
+
+#
+
+<p align="left">
+<h3 align="left">Connect with me:</h3>
+<a href="https://twitter.com/@jeffneuberger" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="@jeffneuberger" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/jeffrey-neuberger" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="jeffrey-neuberger" height="30" width="40" /></a>
+</p>
+
+#
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://aws.amazon.com" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.chartjs.org" target="_blank"> <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://d3js.org/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/d3js/d3js-original.svg" alt="d3js" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://jestjs.io" target="_blank"> <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="jest" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://nextjs.org/" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-3.svg" alt="nextjs" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://reactnative.dev/" target="_blank"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> <a href="https://redux.js.org" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> </p>
+
+#
+
+<p><img src="https://github-readme-stats.vercel.app/api?username=jeffn12&hide=stars&count_private=true&show_icons=true" alt="jeffn12" /></p>
+
+<p><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeffn12&layout=compact" alt="jeffn12" /></p>
+
+#
+
+## Thanks
 
 - To my family and friends who have supported me along my journey!
 - [freeCodeCamp](https://freecodecamp.com) for kickstarting my web development adventures!
