@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/jeffn12/jeffn12.svg?branch=master)](https://travis-ci.org/jeffn12/jeffn12)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d983c51-3c4f-4f06-924b-2ec4ed2fd8ff/deploy-status)](https://app.netlify.com/sites/jeff-neuberger/deploys)
+
 <h1 >Hi 👋, I'm Jeff</h1>
 <h3 >I'm a passionate developer and education advocate. My work has been focused on supporting individuals with disabilities through technology, as well as technology education. I enjoy developing assistive technology solutions and web applications. As a driven educator and lifelong learner, I’m currently exploring opportunities in Web Development so that I can help create and provide accessible, customizable problem-solving tools. I'm looking forward to sharing my expertise in special education and passion for development to help create meaningful, life-changing solutions!</h3>
 
